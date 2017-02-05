@@ -1,0 +1,66 @@
+#container
+	height: 100%
+	width: 100%
+
+#board
+	color: #000
+	font-family: Arial
+	font-size: 0
+	font-weight: bold
+	height: 50px
+	margin: 0 auto
+	text-transform: uppercase
+	width: $size
+
+#puzzle
+	height: $size + 50px
+	margin: 0 auto
+	position: relative
+	top: 50%
+	transform: translateY(-50%)
+	width: $size
+
+.piece
+	background-image: url($url)
+	background-repeat: no-repeat
+	background-size: $size $size
+	border-bottom: 1px solid white
+	border-right: 1px solid white
+	box-sizing: border-box
+	height: $size / $tiles
+	position: absolute
+	transition: transform .25s $ease, opacity .25s $ease
+	width: $size / $tiles
+  
+	.puzzle-solved &
+		opacity: .5
+		pointer-events: none
+
+//--- tiles
+$row: 0
+$col: 0
+
+@for $i from 0 through $tiles - 1
+
+	.piece-pos-#{$tiles - 1}-#{$i}
+		border-bottom: none
+
+	.piece-pos-#{$i}-#{$tiles - 1}
+		border-right: none
+
+@for $i from 1 through $tiles * $tiles
+
+	.piece-#{$i}
+		background-position: -#{$col * $size / $tiles} -#{$row * $size / $tiles}
+
+	.piece-pos-#{$row}-#{$col}
+		transform: translate(#{$col * 100}#{'%'}, #{$row * 100}#{'%'})
+
+	$col: $col + 1
+
+	@if $col == $tiles
+		$col: 0
+		$row: $row + 1
+
+.piece-active
+	opacity: 0

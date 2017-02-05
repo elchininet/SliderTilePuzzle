@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="SlideTilePuzzle">
+
+	<head>
+		<title>Slide Tile Puzzle demo</title>
+		<meta charset="utf-8">
+		<link type="text/css" rel="stylesheet" href="css/main.css">
+		<script src="js/angular.min.js"></script>
+		<script src="js/app.js"></script>
+	</head>
+
+	<body>
+
+		<div id="container" ng-app="SlideTilePuzzle">
+  
+			<div id="puzzle" ng-controller="PuzzleController" ng-class="{'puzzle-solved': solved}">
+
+				<div id="board">
+					<div class="panel panel-l">Movements: <span>{{movements}}</span></div>
+					<div class="panel panel-r">Time: <span>{{time}}</span></div>
+				</div>
+
+				<div ng-repeat="row in data">
+
+					<div ng-repeat="item in row" class="piece piece-{{item.index + 1}} piece-pos-{{item.row}}-{{item.col}}" ng-class="{'piece-active': item.active}" ng-click="movePiece(item)"></div>
+
+				</div>
+
+				<div id="message">
+					<p>
+						PUZZLE SOLVED
+						<br>
+						<a href="#" ng-click="resetPuzzle($event)">START</a>
+					</p>
+				</div>
+
+			</div>
+
+		</div>
+
+	</body>
+
+</html>

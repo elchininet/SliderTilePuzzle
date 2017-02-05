@@ -1,0 +1,34 @@
+{
+  "name": "slidetilepuzzle",
+  "version": "1.0.0",
+  "description": "A small Angular app to create Slider Tile Puzzles",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elchininet/SliderTilePuzzle.git"
+  },
+  "keywords": [
+    "angular",
+    "puzzle",
+    "slider-puzzle"
+  ],
+  "author": "ElChiniNet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elchininet/SliderTilePuzzle/issues"
+  },
+  "homepage": "https://github.com/elchininet/SliderTilePuzzle#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-task-menu": "^1.0.1",
+    "gulp-uglify": "^2.0.1",
+    "gulp-uglifycss": "^1.0.6",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1"
+  }
+}
