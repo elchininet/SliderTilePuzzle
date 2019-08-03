@@ -1,5 +1,4 @@
 # Slide Tile puzzle
-by [ElChiniNet](http://xprimiendo.com)
 
 **Angular.js** Slider Tile puzzle
 
@@ -16,4 +15,4 @@ Notes
 Demo
 ============
 
-[Example demo](http://demos.xprimiendo.com/slider-tiles-puzzle/)
+[Example demo](https://xprimiendo.com/demos/slider-tiles-puzzle/)
